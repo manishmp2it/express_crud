@@ -9,8 +9,11 @@ const port = process.env.PORT || 5000;
 connectDB()
 const app=express()
 
+app.use("/public/uploads",express.static('public/uploads'));
+// app.use('/uploads', express.static('uploads'));
+
 app.use(express.json());
-app.use(express.urlencoded({extended:false}))
+// app.use(express.urlencoded({extended:false}))
 
 app.use('/api/goals',require('./routes/goalRoutes'))
 
