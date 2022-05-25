@@ -6,6 +6,8 @@ const getGoals = asyncHandler(async (req, res) => {
 
     const goals = await Goal.find();
     res.status(200).json(goals);
+    // res.send("jhjhj")
+    // return console.log("hello world");
 })
 
 const setGoals =asyncHandler(async (req, res) => {
