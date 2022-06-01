@@ -22,8 +22,7 @@ const {getGoals,deleteGoals,setGoals,updateGoals}=require('../controllers/goalCo
 router.get('/',getGoals)
 
 router.post('/',upload.single('myimage'),(req,res,next)=>{
-    console.log(req.file);
-
+   
     if (!req.body.text) {
 
         res.status(400)
